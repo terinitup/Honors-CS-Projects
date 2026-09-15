@@ -10,11 +10,12 @@ function setup() {
   BottomY=random(height / 2, height - 50);
   //squares.push(new Square(width/6, TopY, 30));
   
-   for (let col = 0; col <5; col++){
+   for (let col = 0; col <10; col++){
 	for (let row = 0; row<1; row++){
-		let x = 100 + col*60;
+		
+		let x = 80 + col*80;
 		let y = TopY + row*50;
-		squares.push(new Square(x, y, 30, col+1))
+		squares.push(new Square(x, y, 50, col+1))
 
 	}
   }

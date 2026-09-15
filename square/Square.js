@@ -41,7 +41,7 @@ class Square {
   }
   
   changeColor(r, g, b){
-	  this.c = color(r, g, b)
+	  this.c = color(r, g, b);
   }
 	  
   
