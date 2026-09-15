@@ -1,12 +1,13 @@
 class Square {
-  constructor(x, y, size, num) {
+  constructor(x, y, size, id) {
     this.pos = createVector(x, y);
     this.size = size;
     this.vel = createVector(0,0);
     
     this.c = color(0, 174, 243);
     this.target = createVector(x, y);
-    this.num = num;
+    this.id = id;
+   // this.num = num;
   }
   
    hover(){
@@ -21,19 +22,12 @@ class Square {
    square(this.pos.x, this.pos.y, this.size);
    
    if (this.hover()){
-	fill(0);
+	fill(255);
 	textSize(16);
 	textAlign(CENTER, CENTER);
-	text(this.num, this.pos.x, this.pos.y);
+	text(this.id, this.pos.x, this.pos.y);
+	}
    
-	   }
-   
-   //this.pos.add(this.vel);
-   
-   //this.x += this.vx;
-   //this.y += this.vy;
-
-
   }
   
   setTarget(tx, ty){

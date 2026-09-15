@@ -4,6 +4,19 @@ let isDown=false;
 let TopY;
 let BottomY;
 
+let data = {
+	0: "Alabama",
+	1:"Alaska",
+	2: "Arizona",
+	3: "Arkansas",
+	4: "California",
+	5: "Colorado",
+	6: "Conneticut",
+	7: "Deleware",
+	8: "Florida",
+	9:"Georgia"
+}
+
 function setup() {
   createCanvas(1200, 700);
   TopY=height/6;
@@ -15,7 +28,8 @@ function setup() {
 		
 		let x = 80 + col*80;
 		let y = TopY + row*50;
-		squares.push(new Square(x, y, 50, col+1))
+		let id = data[col];
+		squares.push(new Square(x, y, 50, id))
 
 	}
   }
@@ -30,6 +44,8 @@ function draw() {
 	s.shift();
 	s.display();
 	}
+	
+	 
 
 }
 		 
